@@ -8,10 +8,12 @@ specifiers:
   react-dom: ^18.2.0
   typescript: ^4.9.3
   vite: ^4.1.0
+  web-vitals: ^3.1.1
 
 dependencies:
   react: registry.npmjs.org/react/18.2.0
   react-dom: registry.npmjs.org/react-dom/18.2.0_react@18.2.0
+  web-vitals: registry.npmjs.org/web-vitals/3.1.1
 
 devDependencies:
   '@types/react': registry.npmjs.org/@types/react/18.0.28
@@ -1070,6 +1072,12 @@ packages:
     optionalDependencies:
       fsevents: registry.npmjs.org/fsevents/2.3.2
     dev: true
+
+  registry.npmjs.org/web-vitals/3.1.1:
+    resolution: {integrity: sha512-qvllU+ZeQChqzBhZ1oyXmWsjJ8a2jHYpH8AMaVuf29yscOPZfTQTjQFRX6+eADTdsDE8IanOZ0cetweHMs8/2A==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/web-vitals/-/web-vitals-3.1.1.tgz}
+    name: web-vitals
+    version: 3.1.1
+    dev: false
 
   registry.npmjs.org/yallist/3.1.1:
     resolution: {integrity: sha512-a4UGQaWPH59mOXUYnAG2ewncQS4i4F43Tv3JoAM+s2VDAmS9NsK8GpDMLrCHPksFT7h3K6TOoUNn2pb7RoXx4g==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/yallist/-/yallist-3.1.1.tgz}
