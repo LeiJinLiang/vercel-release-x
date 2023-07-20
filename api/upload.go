@@ -4,6 +4,7 @@ import (
 	"encoding/csv"
 	"encoding/json"
 	"net/http"
+	"strings"
 )
 
 type Record map[string]string
@@ -28,15 +29,21 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	var records []Record
+	records := make(map[string]Record)
 	headers := lines[0]
 	for _, line := range lines[1:] {
+		localKey := strings.TrimSpace(line[0])
 		record := make(Record)
-		for i, value := range line {
-			header := headers[i]
-			record[header] = value
+		for i, value := range line[1:] {
+			header := strings.TrimSpace(headers[i+1])
+			trimmedValue := strings.TrimSpace(value)
+			if trimmedValue != "" {
+				record[header] = trimmedValue
+			}
 		}
-		records = append(records, record)
+		if len(record) > 0 {
+			records[localKey] = record
+		}
 	}
 
 	jsonData, err := json.Marshal(records)
