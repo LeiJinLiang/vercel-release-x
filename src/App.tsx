@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { API_HOST } from './config';
 import './App.css';
 
+declare var window: any;
 function App() {
 
   const [files, setFiles] = useState<FileList | null>(null);
@@ -26,6 +27,15 @@ function App() {
   };
 
 
+  const onTest = () => {
+    console.log('click mini');
+    if (window.wx && window.wx.miniProgram) {
+      console.log('window', window);
+      window.wx.miniProgram.navigateTo({ url: '/pages/index/index?needAuth=true' });
+    }
+  };
+
+
   return (
     <div className="App">
       <input type='file' onChange={(e) => {
@@ -33,6 +43,7 @@ function App() {
       }} />
       <button onClick={onSubmit}>upload</button>
       <br />
+      <button onClick={onTest}>test mini app</button>
     </div>
   );
 }
