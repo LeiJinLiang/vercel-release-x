@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { API_HOST } from './config';
 import './App.css';
 
@@ -26,6 +26,11 @@ function App() {
       });
   };
 
+
+  useEffect(() => {
+    console.log('window', window.wx);
+    console.log('window.wx.miniProgram', window?.wx?.miniProgram);
+  }, []);
 
   const onTest = () => {
     console.log('click mini');
