@@ -50,7 +50,7 @@ function App() {
   };
 
   const isInWechatMP = () => {
-    return (navigator.userAgent.match(/micromessenger/i) && navigator.userAgent.match(/miniprogram/i)) || window.__wxjs_environment === 'miniprogram';
+    return !!((navigator.userAgent.match(/micromessenger/i) && navigator.userAgent.match(/miniprogram/i)) || window.__wxjs_environment === 'miniprogram');
   };
 
   return (
@@ -87,7 +87,7 @@ function App() {
       >
         《隐私政策222》
       </div>
-      <h2>{isInWechatMP()}</h2>
+      <h3>{isInWechatMP()}</h3>
       <div>{JSON.stringify(navigator.userAgent)}</div>
     </div>
   );
