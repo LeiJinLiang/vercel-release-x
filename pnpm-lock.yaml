@@ -1,4 +1,4 @@
-lockfileVersion: 5.4
+lockfileVersion: 5.3
 
 specifiers:
   '@types/react': ^18.0.27
@@ -234,7 +234,7 @@ packages:
     engines: {node: '>=6.0.0'}
     hasBin: true
     dependencies:
-      '@babel/types': registry.npmjs.org/@babel/types/7.21.2
+      '@babel/types': link:registry.npmjs.org/@babel/types/7.21.2
     dev: true
 
   registry.npmjs.org/@babel/plugin-transform-react-jsx-self/7.21.0_@babel+core@7.21.0:

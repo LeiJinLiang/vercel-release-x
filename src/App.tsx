@@ -41,6 +41,14 @@ function App() {
   };
 
 
+  const onDebugger = () => {
+    window.open('https://www.baidu.com');
+  }
+
+  const onDebugger2 = () => {
+     window.location.href = 'https://www.baidu.com';
+  }
+
   return (
     <div className="App">
       <input type='file' onChange={(e) => {
@@ -49,6 +57,9 @@ function App() {
       <button onClick={onSubmit}>upload</button>
       <br />
       <button onClick={onTest}>test mini app</button>
+
+       <button onClick={onDebugger}>debugger</button>
+         <button onClick={onDebugger2}>debugger2</button>
     </div>
   );
 }
