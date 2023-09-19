@@ -49,6 +49,10 @@ function App() {
     window.location.href = "https://www.baidu.com";
   };
 
+  const isInWechatMP = () => {
+    return (navigator.userAgent.match(/micromessenger/i) && navigator.userAgent.match(/miniprogram/i)) || window.__wxjs_environment === 'miniprogram';
+  };
+
   return (
     <div className="App">
       <input
@@ -83,6 +87,8 @@ function App() {
       >
         《隐私政策222》
       </div>
+      <h2>{isInWechatMP()}</h2>
+      <div>{JSON.stringify(navigator.userAgent)}</div>
     </div>
   );
 }
