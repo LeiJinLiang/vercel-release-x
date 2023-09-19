@@ -68,21 +68,21 @@ function App() {
       </a>
       <a href="https://www.lilith.com/termofservice">《用户协议》2</a>
 
-      <span
+      <div
         onClick={(e: any) => {
           e.preventDefault();
           window.location.href = "https://www.lilithgames.com/privacy";
         }}
       >
         《隐私政策》
-      </span>
-      <span
+      </div>
+      <div
         onClick={(e: any) => {
           window.location.href = "https://www.lilithgames.com/privacy";
         }}
       >
-        《隐私政策2》
-      </span>
+        《隐私政策222》
+      </div>
     </div>
   );
 }
