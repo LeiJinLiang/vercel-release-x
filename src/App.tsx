@@ -87,7 +87,7 @@ function App() {
       >
         《隐私政策222》
       </div>
-      <h3>{isInWechatMP()}</h3>
+      <h1>{JSON.stringify(isInWechatMP())}</h1>
       <div>{JSON.stringify(navigator.userAgent)}</div>
     </div>
   );
