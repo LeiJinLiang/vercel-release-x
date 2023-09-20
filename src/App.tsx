@@ -67,22 +67,22 @@ function App() {
 
       <button onClick={onDebugger}>debugger</button>
       <button onClick={onDebugger2}>debugger2</button>
-      <a href="https://www.lilith.com/termofservice" target="_blank">
+      <a href="https://www.baidu.com" target="_blank">
         《用户协议》
       </a>
-      <a href="https://www.lilith.com/termofservice">《用户协议》2</a>
+      <a href="https://www.baidu.com">《用户协议》2</a>
 
       <div
         onClick={(e: any) => {
           e.preventDefault();
-          window.location.href = "https://www.lilithgames.com/privacy";
+          window.location.href = "https://www.baidu.com";
         }}
       >
         《隐私政策》
       </div>
       <div
         onClick={(e: any) => {
-          window.location.href = "https://www.lilithgames.com/privacy";
+          window.location.href = "https://www.baidu.com";
         }}
       >
         《隐私政策222》
